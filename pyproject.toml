@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pastafourt-citecover"
+version = "0.1.0"
+description = "把回答切成内容单元，统计带引用与不带引用的比例，并列出无引用单元"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "pastafourt" }]
+keywords = ["ai", "llm", "cli", "analysis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://pastafourt.github.io"
+Repository = "https://github.com/pastafourt/citecover"
+Issues = "https://github.com/pastafourt/citecover/issues"
+
+[project.scripts]
+citecover = "citecover:main"
+
+[tool.setuptools]
+py-modules = ["citecover"]
